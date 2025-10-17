@@ -8,7 +8,7 @@ const priceSymbolInput = $("#price-symbol");
 const priceOutput = $("#price-output");
 
 // Hardcode your backend base URL (HTTP) — change to your IP/DNS if needed
-const HTTP_URL = "http://16.171.206.6:8000";
+const HTTP_URL = "https://revolution-machines-suburban-vii.trycloudflare.com ";
 
 function log(msg, obj) {
   const line = `[${new Date().toISOString()}] ${msg}`;
