@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stackera Assignment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Stackera Assignment</h1>
+        <div id="conn-pill" class="pill pill--disconnected">Disconnected</div>
+    </header>
+
+    <main class="container">
+        <!-- <section class="card">
+            <h2>Backend</h2>
+            <div class="row">
+                <label>Backend URL</label>
+                <input id="backend-url" type="text" />
+                <button id="btn-apply">Apply & Reconnect</button>
+            </div>
+            <p class="hint">
+                Uses <code>GET /latest</code> & <code>/price?symbol=...</code> and subscribes to <code>/ws</code>.
+            </p>
+        </section> -->
+
+        <section class="card">
+            <h2>Snapshot (live)</h2>
+            <div class="row">
+                <input id="filter-symbol" type="text" placeholder="Filter by symbol (e.g., BTCUSDT)" />
+                <button id="btn-refresh">Refresh /latest</button>
+            </div>
+            <table id="ticker-table">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Last Price</th>
+                        <th>Change % (24h)</th>
+                        <th>Updated (UTC)</th>
+                    </tr>
+                </thead>
+                <tbody id="ticker-body">
+                    <!-- rows injected here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Query a Symbol</h2>
+            <div class="row">
+                <input id="price-symbol" type="text" placeholder="BTCUSDT" />
+                <button id="btn-price">Get Price</button>
+            </div>
+            <pre id="price-output" class="log"></pre>
+            <p class="hint">Note: <code>/price</code> is rate limited per IP (120 per minute). If you spam, you’ll see
+                429. </p>
+        </section>
+
+        <section class="card">
+            <h2>Event Log</h2>
+            <pre id="log" class="log"></pre>
+        </section>
+    </main>
+
+    <!-- <script src="./config.js"></script> -->
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>

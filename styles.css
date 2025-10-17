@@ -1,0 +1,71 @@
+:root {
+  --bg: #0e0f13;
+  --card: #161920;
+  --text: #e8eaf0;
+  --muted: #a0a7b4;
+  --green: #18c37d;
+  --red: #ef5953;
+  --yellow: #f4bf4f;
+  --accent: #7aa2f7;
+  --border: #242a35;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px; border-bottom: 1px solid var(--border);
+}
+h1 { margin: 0; font-size: 20px; }
+.container { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+label { min-width: 110px; color: var(--muted); }
+input {
+  flex: 1; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: #0f1218; color: var(--text);
+}
+button {
+  padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);
+  background: #1c2330; color: var(--text); cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+
+.pill {
+  padding: 6px 10px; border-radius: 999px; font-size: 12px; border: 1px solid var(--border);
+}
+.pill--connected { background: rgba(24,195,125,0.15); color: var(--green); }
+.pill--disconnected { background: rgba(239,89,83,0.12); color: var(--red); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+thead th {
+  background: #1a1f29; color: var(--muted); text-align: left; padding: 10px; font-weight: 600;
+}
+tbody td { padding: 10px; border-top: 1px solid var(--border); }
+td.num { font-variant-numeric: tabular-nums; }
+
+.log {
+  background: #0f1218; border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px; min-height: 80px; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.hint { color: var(--muted); font-size: 13px; }
