@@ -8,7 +8,7 @@ const priceSymbolInput = $("#price-symbol");
 const priceOutput = $("#price-output");
 
 // Hardcode your backend base URL (HTTP) — change to your IP/DNS if needed
-const HTTP_URL = "https://monitored-implications-surprise-abroad.trycloudflare.com";
+const HTTP_URL = "https://outer-generate-tex-areas.trycloudflare.com";
 
 function log(msg, obj) {
   const line = `[${new Date().toISOString()}] ${msg}`;
